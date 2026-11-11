@@ -128,3 +128,82 @@ img {
 ::-webkit-scrollbar-corner {
   background: #1f1c25;
 }
+
+/* Portfolio layout: shared header, navigation, and footer */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 0 20px;
+  border-bottom: 1px solid #5a5466;
+}
+
+.site-brand {
+  color: #f0e6d1;
+  border-bottom: none;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+
+.site-brand:hover {
+  color: #dda15e;
+  border-bottom: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.site-header nav a {
+  color: #f0e6d1;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  color: #f4a261;
+  border-bottom-color: #f4a261;
+}
+
+.site-header a:focus-visible,
+.site-footer a:focus-visible {
+  outline: 2px solid #f4a261;
+  outline-offset: 4px;
+}
+
+#main-content {
+  padding: 16px 0 36px;
+}
+
+.site-footer {
+  border-top: 1px solid #5a5466;
+  padding: 16px 0 8px;
+  color: #c6bdad;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-header nav {
+    justify-content: flex-start;
+    gap: 12px 20px;
+  }
+}
+
